@@ -14,14 +14,14 @@
         android:background="?attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
-        app:layout_constraintBottom_toTopOf="@+id/idFragment"
+        app:layout_constraintBottom_toTopOf="@+id/homeFragmentContainer"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 
     <fragment
-        android:id="@+id/idFragment"
+        android:id="@+id/homeFragmentContainer"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -38,11 +38,11 @@
         style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"
         android:layout_width="0dp"
         android:layout_height="56dp"
-        app:menu="@menu/navigation_home"
+        app:menu="@menu/bottom_navigation_home"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/idFragment">
+        app:layout_constraintTop_toBottomOf="@+id/homeFragmentContainer">
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 

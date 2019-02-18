@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorAccent"
+    android:background="#C59AAB"
     tools:context=".RegistrationsFragment">
 
     <TextView
@@ -15,26 +15,46 @@
         android:text="Registrations"
         android:textColor="#FFF" />
 
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|start"
+        android:layout_marginBottom="50dp"
+        android:checked="false"
+        android:text="yes I want to go to Exit Screen" />
+
+    <Button
+        android:id="@+id/buttonToGoExit"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|start"
+        android:background="#2E2ED6"
+        android:enabled="false"
+        android:text="GO Go to Exit screen!"
+        android:textColor="#FFF" />
+
     <Button
         android:id="@+id/buttonToGoHome"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center_horizontal"
-        android:background="#2E2ED6"
         android:layout_margin="8dp"
-        android:textColor="#FFF"
-        android:text="GO Home!" />
+        android:background="#2E2ED6"
+        android:text="GO Home!"
+        android:textColor="#FFF" />
 
     <Button
         android:id="@+id/buttonToGoContact"
         style="@style/Widget.AppCompat.Button.Colored"
-        android:background="#888577"
-        android:textColor="#000"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|start"
         android:layout_margin="8dp"
-        android:text="GO Contact!" />
+        android:background="#888577"
+        android:text="GO Contact!"
+        android:textColor="#000" />
 
 
 </FrameLayout>
