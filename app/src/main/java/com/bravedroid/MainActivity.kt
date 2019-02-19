@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         log("onCreate")
         JobTimer(lifecycle)
 
-        navController = findNavController(R.id.fragmentContainer)
+        navController = findNavController(R.id.mainFragmentContainer)
         val drawerLayout = findViewById<DrawerLayout>(R.id.drawerLayout)
         val navView = findViewById<NavigationView>(R.id.navView)
         //because I used an action bar
@@ -85,7 +85,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onSupportNavigateUp(): Boolean {
-        val navController = findNavController(R.id.fragmentContainer)
+        val navController = findNavController(R.id.mainFragmentContainer)
         val drawerLayout = findViewById<DrawerLayout>(R.id.drawerLayout)
         return NavigationUI.navigateUp(navController, drawerLayout)
     }

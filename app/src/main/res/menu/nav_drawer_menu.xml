@@ -2,12 +2,12 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/registrationsFragment"
+        android:id="@+id/registrations_dest"
         android:title="Registration" />
     <item
-        android:id="@+id/homeFragment"
+        android:id="@+id/home_dest"
         android:title="Home" />
     <item
-        android:id="@+id/contactFragment"
+        android:id="@+id/contact_dest"
         android:title="Contact" />
 </menu>

@@ -2,7 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
     <item
-        android:id="@+id/contactFragment"
+        android:id="@+id/contact_dest"
         android:icon="@android:drawable/ic_menu_call"
         android:title="Go Contact" />
     <item

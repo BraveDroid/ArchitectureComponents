@@ -49,7 +49,7 @@ class RegistrationsFragment : Fragment() {
 
     private fun navigateAndPassArgs() {
         val direction = RegistrationsFragmentDirections.actionRegistrationsFragmentToExitFragment(88)
-        activity?.findNavController(R.id.fragmentContainer)?.navigate(direction)
+        activity?.findNavController(R.id.mainFragmentContainer)?.navigate(direction)
     }
 
 }
