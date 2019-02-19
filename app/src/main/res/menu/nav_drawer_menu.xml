@@ -3,6 +3,12 @@
     <group android:id="@+id/primary">
 
         <item
+            android:id="@+id/welcome_dest"
+            android:icon="@drawable/ic_shopping_cart_white"
+            android:iconTint="#D50000"
+            android:title="Welcome" />
+
+        <item
             android:id="@+id/registrations_dest"
             android:title="Registration" />
         <item

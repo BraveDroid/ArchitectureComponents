@@ -22,12 +22,12 @@ class HomeFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_home, container, false)
 
         val homeNavHostFragment = childFragmentManager.findFragmentById(R.id.homeFragmentContainer) as NavHostFragment
-       // //option1
-       // view.findViewById<BottomNavigationView>(R.id.bottomNavigationView)
-       //         .setupWithNavController(homeNavHostFragment.navController)
+        // //option1
+        // view.findViewById<BottomNavigationView>(R.id.bottomNavigationView)
+        //         .setupWithNavController(homeNavHostFragment.navController)
 
         //option2
-        NavigationUI.setupWithNavController(view.findViewById<BottomNavigationView>(R.id.bottomNavigationView),homeNavHostFragment.navController)
+        NavigationUI.setupWithNavController(view.findViewById<BottomNavigationView>(R.id.bottomNavigationView), homeNavHostFragment.navController)
 
 
         val toolbar = view.findViewById<Toolbar>(R.id.toolbar)

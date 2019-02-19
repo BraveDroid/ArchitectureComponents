@@ -19,6 +19,10 @@ import androidx.navigation.NavDestination
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
+import androidx.navigation.ui.NavigationUI.navigateUp
+import androidx.navigation.ui.NavigationUI.setupWithNavController
+import androidx.navigation.ui.navigateUp
+import androidx.navigation.ui.setupActionBarWithNavController
 import com.google.android.material.navigation.NavigationView
 import timber.log.Timber
 
@@ -37,19 +41,20 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
 
         val drawerLayout = findViewById<DrawerLayout>(R.id.drawerLayout)
-        val navView = findViewById<NavigationView>(R.id.navView)
+        val sideNavView = findViewById<NavigationView>(R.id.navView)
 
 
         navController = findNavController(R.id.mainFragmentContainer)
 
-        //appBarConfiguration = AppBarConfiguration(navController.graph)
-        appBarConfiguration = AppBarConfiguration(setOf(R.id.registrations_dest, R.id.home_dest, R.id.contact_dest), drawerLayout)
+        // appBarConfiguration = AppBarConfiguration(navController.graph)
+        appBarConfiguration = AppBarConfiguration(setOf(R.id.welcome_dest, R.id.registrations_dest), drawerLayout)
 
-
+        setupActionBarWithNavController(navController, appBarConfiguration)
         //because I used an action bar
-        NavigationUI.setupActionBarWithNavController(this, navController, drawerLayout)
+       // setupActionBarWithNavController(navController, drawerLayout)
+
         // NavigationUI.setupActionBarWithNavController(this, navController)
-        NavigationUI.setupWithNavController(navView, navController)
+        setupWithNavController(sideNavView, navController)
 
         //when I may use the tool bar an get ride of the action bar
         //NavigationUI.setupWithNavController(toolbar, navController)
@@ -57,11 +62,14 @@ class MainActivity : AppCompatActivity() {
 
         // prevent nav gesture if not on start destination(swiping)
         navController.addOnDestinationChangedListener { controller: NavController, destination: NavDestination, _ ->
-            if (destination.id == controller.graph.startDestination) {
+            // if (destination.id == controller.graph.startDestination) {
+
+            if (destination.id in setOf(R.id.welcome_dest, R.id.registrations_dest)) {
                 drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED)
             } else {
                 drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED)
             }
+
         }
 
         sendFakeNotification()
@@ -101,7 +109,8 @@ class MainActivity : AppCompatActivity() {
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.mainFragmentContainer)
         val drawerLayout = findViewById<DrawerLayout>(R.id.drawerLayout)
-        return NavigationUI.navigateUp(navController, drawerLayout)
+        // return NavigationUI.navigateUp(navController, drawerLayout)
+        return navController.navigateUp(appBarConfiguration)
     }
 
     override fun onRestart() {
