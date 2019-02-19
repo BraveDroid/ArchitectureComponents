@@ -17,6 +17,7 @@ import androidx.navigation.NavController
 import androidx.navigation.NavDeepLinkBuilder
 import androidx.navigation.NavDestination
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.NavigationUI.navigateUp
@@ -43,6 +44,11 @@ class MainActivity : AppCompatActivity() {
         val drawerLayout = findViewById<DrawerLayout>(R.id.drawerLayout)
         val sideNavView = findViewById<NavigationView>(R.id.navView)
 
+      //option1
+      // val host: NavHostFragment = supportFragmentManager
+      //         .findFragmentById(R.id.mainFragmentContainer) as NavHostFragment? ?: return
+      // // Set up Action Bar
+      // val navController = host.navController
 
         navController = findNavController(R.id.mainFragmentContainer)
 
