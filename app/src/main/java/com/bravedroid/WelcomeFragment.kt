@@ -72,6 +72,9 @@ class WelcomeFragment : Fragment() {
         R.id.share -> {
             shareSuccess()
             true
+        } R.id.home_dest -> {
+            findNavController().navigate(R.id.home_dest)
+            true
         }
         R.id.contact_dest -> NavigationUI.onNavDestinationSelected(item, view!!.findNavController())
         else -> {

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/contact_dest"
         android:icon="@android:drawable/ic_menu_call"
@@ -9,4 +10,11 @@
         android:id="@+id/share"
         android:icon="@android:drawable/ic_menu_share"
         android:title="Share" />
+
+
+    <item
+        android:id="@+id/home_dest"
+        android:icon="@drawable/ic_shopping_cart_white"
+        android:title="Card Go HOME"
+        app:showAsAction="ifRoom" />
 </menu>
