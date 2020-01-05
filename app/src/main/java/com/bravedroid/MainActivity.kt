@@ -154,6 +154,8 @@ class MainActivity : AppCompatActivity() {
     }
 }
 
+//bad design as the lifeCycleOwner should have a reference on this class without giving it his lifecyle
+//then he will  do the addObserver(jobTimer)
 class JobTimer(lifecycle: Lifecycle) : LifecycleObserver {
     private var secondCount = 0
     private var handler = Handler()

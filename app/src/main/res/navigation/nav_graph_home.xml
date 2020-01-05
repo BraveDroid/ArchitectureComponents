@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_graph_home"
-    app:startDestination="@id/favorites_dest">
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/nav_graph_home"
+            app:startDestination="@id/favorites_dest">
 
     <fragment
-        android:id="@+id/save_dest"
-        android:name="com.bravedroid.home.SaveFragment"
-        android:label="fragment_save"
-        tools:layout="@layout/fragment_save" />
+            android:id="@+id/favorites_dest"
+            android:name="com.bravedroid.home.FavoritesFragment"
+            android:label="fragment_favorites"
+            tools:layout="@layout/fragment_favorites"/>
     <fragment
-        android:id="@+id/favorites_dest"
-        android:name="com.bravedroid.home.FavoritesFragment"
-        android:label="fragment_favorites"
-        tools:layout="@layout/fragment_favorites" />
+            android:id="@+id/save_dest"
+            android:name="com.bravedroid.home.SaveFragment"
+            android:label="fragment_save"
+            tools:layout="@layout/fragment_save"/>
     <fragment
-        android:id="@+id/share_rest"
-        android:name="com.bravedroid.home.ShareFragment"
-        android:label="fragment_share"
-        tools:layout="@layout/fragment_share" />
+            android:id="@+id/share_rest"
+            android:name="com.bravedroid.home.ShareFragment"
+            android:label="fragment_share"
+            tools:layout="@layout/fragment_share"/>
 </navigation>
